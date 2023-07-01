@@ -4,6 +4,7 @@ public class ReverseNumber {
         System.out.println();
         reverseNumber2(1234);
         System.out.println(sum);
+        System.out.println("Testing "+ reverse3(1234));
     }
 
     public static void reverseNumber(int number){
@@ -23,6 +24,19 @@ public class ReverseNumber {
         int remainder = number % 10;
         sum = sum * 10 + remainder;
         reverseNumber2(number/10);
+    }
+
+    static int reverse3(int n){
+        int digit = (int)(Math.log10(n) + 1);
+        return helper(n, digit);
+    }
+
+    static int helper(int n, int digit){
+        if (n%10 == n){
+            return n;
+        }
+        int remainder = n%10;
+        return remainder * (int) Math.pow(10, digit-1) + helper(n/10, digit-1);
     }
 
 }
