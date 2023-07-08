@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String[] args){
-        int[] arr = {5, 4, 3, 2, 1};
+        int[] arr = {6, 3, 9, 5, 2, 8};
         sort(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
@@ -36,6 +36,7 @@ public class QuickSort {
         }
 
         // now my pivot is at correct index, please sort two halves now
+        sort(arr, low, end);
         sort(arr, start, high);
     }
 
