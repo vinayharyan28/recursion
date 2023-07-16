@@ -36,7 +36,9 @@ public class SubSequence {
             for (int i=0; i<n; i++){
                 List<Integer> internal = new ArrayList<>(outer.get(i));
                 internal.add(num);
+                System.out.println("Internal = " + internal);
                 outer.add(internal);
+                System.out.println("Outer = " + outer);
             }
         }return outer;
     }
@@ -46,6 +48,7 @@ public class SubSequence {
         System.out.println("subSequence2 = " + subSequence2("", "abc"));
         int[] arr = {1, 2, 3};
         System.out.println("subset arr = " + subset(arr));
+
 
     }
 }
