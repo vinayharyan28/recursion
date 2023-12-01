@@ -6,6 +6,7 @@ public class Permutations {
     public static void main(String[] args) {
         permutation("", "abc");
         System.out.println(permutationResult("", "abc"));
+        System.out.println("vinay".substring(0, 1));
     }
 
     static void permutation(String p, String up){

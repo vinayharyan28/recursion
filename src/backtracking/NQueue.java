@@ -29,6 +29,7 @@ public class NQueue {
     }
 
     static boolean isSafe(boolean[][] board, int row, int col){
+        //Vertical
         for (int i=0; i<row; i++){
             if (board[i][col]){
                 return false;
